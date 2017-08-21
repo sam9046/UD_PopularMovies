@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PopularMovies</string>
+    <string name="most_popular">Popular</string>
+    <string name="highest_rated">Highest rated</string>
+    <string name="release_date">Release date:</string>
+    <string name="user_rating">User rating:</string>
+    <string name="movie_poster_thumbnail_content_description">Movie poster thumbnail</string>
+    <string name="movie_poster_bg_img_content_description">Movie poster background image</string>
+    <string name="apologies_something_went_wrong_fetching_movies">Apologies, something went wrong fetching movies</string>
+</resources>
