@@ -20,7 +20,7 @@
             app:contentScrim="@color/colorPrimary">
 
             <ImageView
-                android:id="@+id/movie_thumb_img_view"
+                android:id="@+id/movie_bg_img_view"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:contentDescription="@string/movie_poster_bg_img_content_description"
@@ -99,6 +99,7 @@
                         card_view:layout_constraintLeft_toLeftOf="parent"
                         card_view:layout_constraintTop_toTopOf="parent"
                         android:layout_marginTop="0dp"
+                        android:transitionName="movie_thumbnail"
                         tools:src="@color/colorPrimary" />
 
                     <TextView

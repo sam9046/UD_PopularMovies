@@ -2,6 +2,7 @@ package com.samcackett.popularmovies;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -87,7 +88,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             Context context = v.getContext();
             Intent intent = new Intent(context, MovieDetailActivity.class);
             intent.putExtra("MovieModel", movieModel);
-            context.startActivity(intent);
+            MainActivity mainActivity = (MainActivity) context;
+            ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(mainActivity, v.findViewById(R.id.movie_thumb_img_view), "movie_thumbnail");
+            context.startActivity(intent, options.toBundle());
         }
     }
 }

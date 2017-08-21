@@ -42,7 +42,7 @@ public class MovieDetailActivity extends AppCompatActivity {
             actionBar.setDisplayShowHomeEnabled(true);
         }
 
-        imageView = (ImageView) findViewById(R.id.movie_thumb_img_view);
+        imageView = (ImageView) findViewById(R.id.movie_bg_img_view);
         cardImageView = (ImageView) findViewById(R.id.card_thumbnail_image_view);
         releaseDateView = (TextView) findViewById(R.id.card_release_date);
         synopsisView = (TextView) findViewById(R.id.card_synopsis);

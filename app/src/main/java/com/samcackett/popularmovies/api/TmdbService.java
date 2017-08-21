@@ -1,7 +1,7 @@
 package com.samcackett.popularmovies.api;
 
-import android.os.AsyncTask;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.samcackett.popularmovies.BuildConfig;
 import com.samcackett.popularmovies.model.tmdb.TmdbResponse;
@@ -25,6 +25,7 @@ import retrofit2.http.GET;
 public class TmdbService {
 
     private static final String BASE_TMDB_URL = "http://api.themoviedb.org/3/";
+    private static final String TAG = "TmdbService";
 
     public interface Service {
         @GET("movie/popular")
@@ -48,6 +49,12 @@ public class TmdbService {
             public Response intercept(@NonNull Chain chain) throws IOException {
                 Request original = chain.request();
                 HttpUrl originalHttpUrl = original.url();
+
+                String apiKey = BuildConfig.TMDB_API_KEY;
+                if(apiKey.contentEquals("")) {
+                    Log.e(TAG, "TMDB API KEY MISSING");
+                    return null;
+                }
 
                 HttpUrl url = originalHttpUrl.newBuilder()
                         .addQueryParameter("api_key", BuildConfig.TMDB_API_KEY)
