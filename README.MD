@@ -1,0 +1,1 @@
+To run the project, make sure to add the the movie database API key in the app build.gradle
