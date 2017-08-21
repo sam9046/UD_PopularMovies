@@ -30,7 +30,7 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
-    public static final String TMDB_RESPONSE = "TMDB_RESPONSE";
+    private static final String TMDB_RESPONSE = "TMDB_RESPONSE";
     private RecyclerViewAdapter adapter;
     private ProgressBar progressBar;
     private TextView errorTextView;
