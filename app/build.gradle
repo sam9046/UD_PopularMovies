@@ -11,7 +11,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         // TODO: Insert The Movie DB API key here
-        buildConfigField "String", "TMDB_API_KEY", "\"920f5ff08ad4a32cb4f065c53bc73fba\""
+        buildConfigField "String", "TMDB_API_KEY", "\"\""
     }
     buildTypes {
         release {

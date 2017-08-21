@@ -64,7 +64,7 @@ public class TmdbService {
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(url)
-                .addConverterFactory(GsonConverterFactory.create()).callbackExecutor(AsyncTask.THREAD_POOL_EXECUTOR)
+                .addConverterFactory(GsonConverterFactory.create())
                 .client(httpClient.build())
                 .build();
 
